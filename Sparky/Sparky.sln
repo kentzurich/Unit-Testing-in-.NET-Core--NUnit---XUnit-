@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparky", "Sparky\Sparky.csproj", "{D12F8955-E2A3-4F60-A0BE-B915CEA91617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparky_MSTest", "Sparky_MSTest\Sparky_MSTest.csproj", "{A90DA847-945A-44B6-8E43-2B90391BC3B7}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D12F8955-E2A3-4F60-A0BE-B915CEA91617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12F8955-E2A3-4F60-A0BE-B915CEA91617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12F8955-E2A3-4F60-A0BE-B915CEA91617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12F8955-E2A3-4F60-A0BE-B915CEA91617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90DA847-945A-44B6-8E43-2B90391BC3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90DA847-945A-44B6-8E43-2B90391BC3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90DA847-945A-44B6-8E43-2B90391BC3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90DA847-945A-44B6-8E43-2B90391BC3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

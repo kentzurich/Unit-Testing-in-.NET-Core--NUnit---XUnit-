@@ -594,6 +594,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Sparky/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Sparky.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparky.dll": {}
+        }
       }
     }
   },
@@ -2286,6 +2296,11 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "Sparky/1.0.0": {
+      "type": "project",
+      "path": "../Sparky/Sparky.csproj",
+      "msbuildProject": "../Sparky/Sparky.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2293,6 +2308,7 @@
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.7.1",
+      "Sparky >= 1.0.0",
       "coverlet.collector >= 3.2.0"
     ]
   },
@@ -2328,7 +2344,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\kentz\\Documents\\GitHub\\Repositories\\Unit-Testing-in-.NET-Core--NUnit---XUnit-\\Sparky\\Sparky\\Sparky.csproj": {
+              "projectPath": "C:\\Users\\kentz\\Documents\\GitHub\\Repositories\\Unit-Testing-in-.NET-Core--NUnit---XUnit-\\Sparky\\Sparky\\Sparky.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,11 @@
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\bin\Debug\net7.0\Sparky.deps.json
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\bin\Debug\net7.0\Sparky.dll
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\bin\Debug\net7.0\Sparky.pdb
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\obj\Debug\net7.0\Sparky.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\obj\Debug\net7.0\Sparky.AssemblyInfoInputs.cache
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\obj\Debug\net7.0\Sparky.AssemblyInfo.cs
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\obj\Debug\net7.0\Sparky.csproj.CoreCompileInputs.cache
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\obj\Debug\net7.0\Sparky.dll
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\obj\Debug\net7.0\refint\Sparky.dll
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\obj\Debug\net7.0\Sparky.pdb
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky\obj\Debug\net7.0\ref\Sparky.dll
