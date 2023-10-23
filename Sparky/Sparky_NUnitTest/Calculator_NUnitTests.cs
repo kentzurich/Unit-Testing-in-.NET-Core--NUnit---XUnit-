@@ -36,7 +36,9 @@ namespace Sparky
 
             bool isOdd = calc.IsOddNumber(1);
 
+            //constraint model
             Assert.That(isOdd, Is.EqualTo(true));
+            //classic model
             Assert.IsTrue(isOdd);
         }
     }
