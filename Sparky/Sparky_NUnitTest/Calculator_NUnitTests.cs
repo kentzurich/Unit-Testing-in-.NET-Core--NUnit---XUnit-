@@ -54,5 +54,21 @@ namespace Sparky
 
             return calc.IsOddNumber(a);
         }
+
+        [Test]
+        [TestCase(5.4, 10.5)] //15.9
+        [TestCase(5.43, 10.53)] //15.96
+        [TestCase(5.49, 10.59)] //16.08
+        public void AddNumbersDouble_InputTwoDouble_GetCorrectAddition(double a, double b)
+        {
+            //Arrange - Initialization
+            Calculator calc = new();
+
+            //Act - Invoke method to test
+            double result = calc.AddNumbersDouble(a, b);
+
+            //Assert
+            Assert.AreEqual(15.9, result, .2);
+        }
     }
 }
