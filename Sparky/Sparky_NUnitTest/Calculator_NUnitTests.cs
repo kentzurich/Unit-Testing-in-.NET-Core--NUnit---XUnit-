@@ -30,11 +30,14 @@ namespace Sparky
         }
 
         [Test]
-        public void IsOddChecker_InputOddNumber_ReturnTrue()
+        [TestCase(11)]
+        [TestCase(13)]
+        //[TestCase(13, 12)]
+        public void IsOddChecker_InputOddNumber_ReturnTrue(int a)
         {
             Calculator calc = new();
 
-            bool isOdd = calc.IsOddNumber(1);
+            bool isOdd = calc.IsOddNumber(a);
 
             //constraint model
             Assert.That(isOdd, Is.EqualTo(true));
