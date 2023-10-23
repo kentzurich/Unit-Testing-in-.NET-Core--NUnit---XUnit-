@@ -15,7 +15,7 @@ namespace Sparky_MSTest
             int result = calc.AddNumber(10, 20);
 
             //Assert
-            Assert.AreEqual(30, result);
+            Assert.AreEqual(3, result);
         }
     }
 }
