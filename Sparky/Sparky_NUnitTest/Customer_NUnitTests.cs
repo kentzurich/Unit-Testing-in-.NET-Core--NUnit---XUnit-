@@ -5,37 +5,44 @@ namespace Sparky
     [TestFixture]
     public class Customer_NUnitTests
     {
+        private Customer _customer;
+        [SetUp] 
+        public void SetUp() 
+        { 
+            _customer = new Customer();
+        }
+
         [Test]
         public void CombineNames_InputFirstAndLastName_ReturnFullName()
         {
             //Arrange
-            var customer = new Customer();
+           // var customer = new Customer();
 
             //Act
-            customer.GreetAndCombineNames("Kent", "Zurich");
+            _customer.GreetAndCombineNames("Kent", "Zurich");
 
             //Assert
-            Assert.AreEqual(customer.GreetMessage, "Hello, Kent Zurich");
+            Assert.AreEqual(_customer.GreetMessage, "Hello, Kent Zurich");
 
-            Assert.That(customer.GreetMessage, Is.EqualTo("Hello, Kent Zurich"));
-            Assert.That(customer.GreetMessage, Does.Contain("Kent Zurich"));
-            Assert.That(customer.GreetMessage, Does.Contain("kent zurich").IgnoreCase);
-            Assert.That(customer.GreetMessage, Does.StartWith("Hello"));
-            Assert.That(customer.GreetMessage, Does.EndWith("Zurich"));
-            Assert.That(customer.GreetMessage, Does.Match("Hello, [A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+"));
+            Assert.That(_customer.GreetMessage, Is.EqualTo("Hello, Kent Zurich"));
+            Assert.That(_customer.GreetMessage, Does.Contain("Kent Zurich"));
+            Assert.That(_customer.GreetMessage, Does.Contain("kent zurich").IgnoreCase);
+            Assert.That(_customer.GreetMessage, Does.StartWith("Hello"));
+            Assert.That(_customer.GreetMessage, Does.EndWith("Zurich"));
+            Assert.That(_customer.GreetMessage, Does.Match("Hello, [A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+"));
         }
 
         [Test]
         public void GreetMessage_NotGreeted_ReturnNull()
         {
             //Arrange
-            var customer = new Customer();
+            //var customer = new Customer();
 
             //Act
 
 
             //Assert
-            Assert.IsNull(customer.GreetMessage);
+            Assert.IsNull(_customer.GreetMessage);
         }
     }
 }
