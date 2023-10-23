@@ -44,5 +44,15 @@ namespace Sparky
             //classic model
             Assert.IsTrue(isOdd);
         }
+
+        [Test]
+        [TestCase(10, ExpectedResult = false)]
+        [TestCase(11, ExpectedResult = true)]
+        public bool IsOddChecker_InputNumber_ReturnTrueIfOdd(int a)
+        {
+            Calculator calc = new();
+
+            return calc.IsOddNumber(a);
+        }
     }
 }
