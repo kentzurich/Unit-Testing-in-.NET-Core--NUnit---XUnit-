@@ -72,11 +72,19 @@ namespace Sparky
                 .Throws<ArgumentException>(() => 
                     _customer.GreetAndCombineNames("", "Zurich"));
 
+            //Exception With Message
             Assert.AreEqual("Empty firstName", exceptionDetails?.Message);
 
             Assert.That(() => 
                 _customer.GreetAndCombineNames("", "Zurich"), 
                 Throws.ArgumentException.With.Message.EqualTo("Empty firstName"));
+
+
+            //Exception Without message
+            Assert.Throws<ArgumentException>(() => _customer.GreetAndCombineNames("", "Zurich"));
+
+            Assert.That(() =>
+                _customer.GreetAndCombineNames("", "Zurich"), Throws.ArgumentException);
         }
     }
 }
