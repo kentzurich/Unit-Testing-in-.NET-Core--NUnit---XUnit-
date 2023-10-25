@@ -21,15 +21,18 @@ namespace Sparky
             //Act
             _customer.GreetAndCombineNames("Kent", "Zurich");
 
-            //Assert
-            Assert.AreEqual(_customer.GreetMessage, "Hello, Kent Zurich");
+            Assert.Multiple(() =>
+            {
+                //Assert
+                Assert.AreEqual(_customer.GreetMessage, "Hello, Kent Zurich");
 
-            Assert.That(_customer.GreetMessage, Is.EqualTo("Hello, Kent Zurich"));
-            Assert.That(_customer.GreetMessage, Does.Contain("Kent Zurich"));
-            Assert.That(_customer.GreetMessage, Does.Contain("kent zurich").IgnoreCase);
-            Assert.That(_customer.GreetMessage, Does.StartWith("Hello"));
-            Assert.That(_customer.GreetMessage, Does.EndWith("Zurich"));
-            Assert.That(_customer.GreetMessage, Does.Match("Hello, [A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+"));
+                Assert.That(_customer.GreetMessage, Is.EqualTo("Hello, Kent Zurich"));
+                Assert.That(_customer.GreetMessage, Does.Contain("Kent Zurich"));
+                Assert.That(_customer.GreetMessage, Does.Contain("kent zurich").IgnoreCase);
+                Assert.That(_customer.GreetMessage, Does.StartWith("Hello"));
+                Assert.That(_customer.GreetMessage, Does.EndWith("Zurich"));
+                Assert.That(_customer.GreetMessage, Does.Match("Hello, [A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+"));
+            });
         }
 
         [Test]
