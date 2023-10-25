@@ -86,5 +86,23 @@ namespace Sparky
             Assert.That(() =>
                 _customer.GreetAndCombineNames("", "Zurich"), Throws.ArgumentException);
         }
+
+        [Test]
+        public void CustomerType_CreateCustomerWithLessThan100Order_ReturnBasicCustomer()
+        {
+            _customer.OrderTotal = 10;
+            var result = _customer.GetCustomerDetails();
+
+            Assert.That(result, Is.TypeOf<BasicCustomer>());
+        }
+
+        [Test]
+        public void CustomerType_CreateCustomerWithMoreThan100Order_ReturnBasicCustomer()
+        {
+            _customer.OrderTotal = 110;
+            var result = _customer.GetCustomerDetails();
+
+            Assert.That(result, Is.TypeOf<PlatinumCustomer>());
+        }
     }
 }
