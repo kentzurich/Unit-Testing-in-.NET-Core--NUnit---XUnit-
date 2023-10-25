@@ -55,5 +55,28 @@ namespace Sparky
 
             Assert.That(result, Is.InRange(10, 25));
         }
+
+        [Test]
+        public void GreetMessage_GreetedWithoutLastname_ReturnsNotNull()
+        {
+            _customer.GreetAndCombineNames("ben", "");
+
+            Assert.IsNotNull(_customer.GreetMessage);
+            Assert.IsFalse(string.IsNullOrEmpty(_customer.GreetMessage));
+        }
+
+        [Test]
+        public void GreetChecker_EmptyFirstname_ThrowsException()
+        {
+            var exceptionDetails = Assert
+                .Throws<ArgumentException>(() => 
+                    _customer.GreetAndCombineNames("", "Zurich"));
+
+            Assert.AreEqual("Empty firstName", exceptionDetails?.Message);
+
+            Assert.That(() => 
+                _customer.GreetAndCombineNames("", "Zurich"), 
+                Throws.ArgumentException.With.Message.EqualTo("Empty firstName"));
+        }
     }
 }
