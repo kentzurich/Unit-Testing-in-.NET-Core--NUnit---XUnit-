@@ -108,5 +108,18 @@ namespace Sparky
             Assert.IsTrue(logMock.Object.LogWithOutputResult("Kent", out result));
             Assert.That(result, Is.EqualTo(desiredOutput));
         }
+
+        [Test]
+        public void BankLogDummy_LogRefChecker_ReturnTrue()
+        {
+            var logMock = new Mock<ILogBook>();
+            Customer customer = new();
+            Customer customerNotUsed = new();
+
+            logMock.Setup(x => x.LogWithRefObj(ref customer)).Returns(true);
+
+            Assert.IsTrue(logMock.Object.LogWithRefObj(ref customer));
+            Assert.IsFalse(logMock.Object.LogWithRefObj(ref customerNotUsed));
+        }
     }
 }

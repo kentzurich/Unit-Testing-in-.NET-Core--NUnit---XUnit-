@@ -1,4 +1,6 @@
-﻿namespace Sparky
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace Sparky
 {
     public interface ILogBook
     {
@@ -7,6 +9,7 @@
         bool LogBalanceAfterWithdrawal(int balanceAfterWithdrawal);
         string MessageWithReturnString(string message);
         bool LogWithOutputResult(string str, out string outputStr);
+        bool LogWithRefObj(ref Customer customer);
     }
 
     public class LogBook : ILogBook
@@ -32,6 +35,11 @@
         public bool LogWithOutputResult(string str, out string outputStr)
         {
             outputStr = "Hello " + str;
+            return true;
+        }
+
+        public bool LogWithRefObj(ref Customer customer)
+        {
             return true;
         }
 
@@ -63,6 +71,11 @@
         {
             outputStr = "";
             return true;
+        }
+
+        public bool LogWithRefObj(ref Customer customer)
+        {
+            throw new NotImplementedException();
         }
 
         public void Message(string message) { }
