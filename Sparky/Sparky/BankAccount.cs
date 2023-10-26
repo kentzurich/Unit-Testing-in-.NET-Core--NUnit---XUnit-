@@ -14,6 +14,9 @@
         public bool Deposit(int amount)
         {
             _logbook.Message("Deposit Invoke");
+            _logbook.Message("Test");
+            _logbook.LogSeverity = 101;
+            var temp = _logbook.LogSeverity;
             balance += amount;
 
             return true;

@@ -156,5 +156,20 @@ namespace Sparky
 
             Assert.That(counter, Is.EqualTo(7));
         }
+
+        [Test]
+        public void BankLogDummy_VerifyExample()
+        {
+            var logMock = new Mock<ILogBook>();
+            BankAccount bankAccount = new(logMock.Object);
+            bankAccount.Deposit(100);
+            //Assert.That(bankAccount.GetBalance, Is.EqualTo(100));
+
+            //verification
+            logMock.Verify(x => x.Message(It.IsAny<string>()), Times.Exactly(2));
+            logMock.Verify(x => x.Message("Test"), Times.AtLeastOnce);
+            logMock.VerifySet(x => x.LogSeverity = 101, Times.Once);
+            logMock.VerifyGet(x => x.LogSeverity, Times.Once);
+        }
     }
 }
