@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0KV42OQuS97wD84D2MRi93dIp2P3DCtugxkUndWlFjyc2YlAj9DSBx8s6ICmoOfl7S518hvnQu6R2enqIBD3FQ==",
+  "dgSpecHash": "5EGpjXUSTk8JOXxsrRSbUAgS6ypO3ZTasOVEprXF0U67fxaiufDxS8uM9CFBBaxo1PIdhJ8Y+yAdsLZ84ziwgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\kentz\\Documents\\GitHub\\Repositories\\Unit-Testing-in-.NET-Core--NUnit---XUnit-\\Sparky\\Sparky_NUnitTest\\Sparky_NUnitTest.csproj",
   "expectedPackageFiles": [
