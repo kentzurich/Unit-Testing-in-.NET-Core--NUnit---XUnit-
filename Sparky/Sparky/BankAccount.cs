@@ -21,15 +21,15 @@
 
         public bool Withdraw(int amount)
         {
-            _logbook.Message("Withdraw Invoke");
-            if (amount <= balance )
+            if (amount <= balance)
             {
+                _logbook.Message("Withdrawal Amount: " + amount.ToString());
                 balance -= amount;
-
-                return true;
             }
 
-            return false;
+            balance = balance - amount;
+
+            return _logbook.LogBalanceAfterWithdrawal(balance);
         }
 
         public int GetBalance()
