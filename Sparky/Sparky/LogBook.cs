@@ -5,6 +5,7 @@
         void Message(string message);
         bool LogToDb(string message);
         bool LogBalanceAfterWithdrawal(int balanceAfterWithdrawal);
+        string MessageWithReturnString(string message);
     }
 
     public class LogBook : ILogBook
@@ -31,6 +32,12 @@
         {
             Console.WriteLine(message);
         }
+
+        public string MessageWithReturnString(string message)
+        {
+            Console.WriteLine(message);
+            return message.ToLower();
+        }
     }
 
     public class LogFaker : ILogBook
@@ -46,5 +53,10 @@
         }
 
         public void Message(string message) { }
+
+        public string MessageWithReturnString(string message)
+        {
+            return string.Empty;
+        }
     }
 }
