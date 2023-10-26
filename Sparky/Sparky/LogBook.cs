@@ -4,6 +4,8 @@ namespace Sparky
 {
     public interface ILogBook
     {
+        public int LogSeverity { get; set; }
+        public string LogType { get; set; }
         void Message(string message);
         bool LogToDb(string message);
         bool LogBalanceAfterWithdrawal(int balanceAfterWithdrawal);
@@ -14,6 +16,9 @@ namespace Sparky
 
     public class LogBook : ILogBook
     {
+        public int LogSeverity { get; set; }
+        public string LogType { get; set; }
+
         public bool LogBalanceAfterWithdrawal(int balanceAfterWithdrawal)
         {
             if (balanceAfterWithdrawal > 0)
@@ -57,6 +62,9 @@ namespace Sparky
 
     public class LogFaker : ILogBook
     {
+        public int LogSeverity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string LogType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public bool LogBalanceAfterWithdrawal(int balanceAfterWithdrawal)
         {
             return true;
