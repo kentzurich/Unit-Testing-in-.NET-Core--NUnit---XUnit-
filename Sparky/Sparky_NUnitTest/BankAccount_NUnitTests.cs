@@ -9,7 +9,11 @@ namespace Sparky
         [SetUp] 
         public void SetUp() 
         {
-            bankAccount = new(new LogBook());
+            //integration test
+            //bankAccount = new(new LogBook());
+
+            //unit test
+            bankAccount = new(new LogFaker());
         }
 
         [Test]
