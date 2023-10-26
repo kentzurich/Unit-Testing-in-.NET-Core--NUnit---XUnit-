@@ -43,5 +43,35 @@ namespace Sparky
             Assert.That(result, Is.True);
             Assert.That(getBalance, Is.EqualTo(100));
         }
+
+        [Test]
+        [TestCase(200, 100)]
+        public void BankWithdraw_Withdraw100With200Balance_ReturnsTrue(int balance, int withdraw)
+        {
+            var logMock = new Mock<ILogBook>();
+            logMock.Setup(x => x.LogToDb(It.IsAny<string>())).Returns(true);
+            logMock.Setup(x => x.LogBalanceAfterWithdrawal(It.Is<int>(x => x > 0))).Returns(true);
+
+            BankAccount bankAccount = new(logMock.Object);
+            bankAccount.Deposit(balance);
+            var result = bankAccount.Withdraw(withdraw);
+
+            Assert.IsTrue(result);
+        }
+
+        [Test]
+        [TestCase(200, 300)]
+        public void BankWithdraw_Withdraw300With200Balance_ReturnsTrue(int balance, int withdraw)
+        {
+            var logMock = new Mock<ILogBook>();
+            logMock.Setup(x => x.LogToDb(It.IsAny<string>())).Returns(true);
+            logMock.Setup(x => x.LogBalanceAfterWithdrawal(It.Is<int>(x => x > 0))).Returns(true);
+
+            BankAccount bankAccount = new(logMock.Object);
+            bankAccount.Deposit(balance);
+            var result = bankAccount.Withdraw(withdraw);
+
+            Assert.IsTrue(result);
+        }
     }
 }

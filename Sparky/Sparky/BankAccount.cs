@@ -25,11 +25,10 @@
             {
                 _logbook.Message("Withdrawal Amount: " + amount.ToString());
                 balance -= amount;
+                return _logbook.LogBalanceAfterWithdrawal(balance);
             }
 
-            balance = balance - amount;
-
-            return _logbook.LogBalanceAfterWithdrawal(balance);
+            return _logbook.LogBalanceAfterWithdrawal(balance - amount);
         }
 
         public int GetBalance()
