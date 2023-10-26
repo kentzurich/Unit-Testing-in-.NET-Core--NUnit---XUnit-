@@ -6,6 +6,7 @@
         bool LogToDb(string message);
         bool LogBalanceAfterWithdrawal(int balanceAfterWithdrawal);
         string MessageWithReturnString(string message);
+        bool LogWithOutputResult(string str, out string outputStr);
     }
 
     public class LogBook : ILogBook
@@ -25,6 +26,12 @@
         public bool LogToDb(string message)
         {
             Console.WriteLine(message);
+            return true;
+        }
+
+        public bool LogWithOutputResult(string str, out string outputStr)
+        {
+            outputStr = "Hello " + str;
             return true;
         }
 
@@ -49,6 +56,12 @@
 
         public bool LogToDb(string message)
         {
+            return true;
+        }
+
+        public bool LogWithOutputResult(string str, out string outputStr)
+        {
+            outputStr = "";
             return true;
         }
 
