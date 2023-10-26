@@ -99,3 +99,8 @@ C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---
 C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky_NUnitTest\obj\Debug\net7.0\Sparky_NUnitTest.pdb
 C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky_NUnitTest\obj\Debug\net7.0\Sparky_NUnitTest.genruntimeconfig.cache
 C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky_NUnitTest\obj\Debug\net7.0\ref\Sparky_NUnitTest.dll
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky_NUnitTest\bin\Debug\net7.0\Castle.Core.dll
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky_NUnitTest\bin\Debug\net7.0\Moq.dll
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky_NUnitTest\bin\Debug\net7.0\System.Diagnostics.EventLog.dll
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky_NUnitTest\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\kentz\Documents\GitHub\Repositories\Unit-Testing-in-.NET-Core--NUnit---XUnit-\Sparky\Sparky_NUnitTest\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 
 namespace Sparky
 {
@@ -9,16 +10,33 @@ namespace Sparky
         [SetUp] 
         public void SetUp() 
         {
+           
+        }
+
+        [Test]
+        public void BankDepositLogFaker_Add100_ReturnTrue()
+        {
             //integration test
             //bankAccount = new(new LogBook());
 
             //unit test
-            bankAccount = new(new LogFaker());
+            BankAccount bankAccount1 = new(new LogFaker());
+
+            var result = bankAccount1.Deposit(100);
+            var getBalance = bankAccount1.GetBalance();
+
+            Assert.That(result, Is.True);
+            Assert.That(getBalance, Is.EqualTo(100));
         }
 
         [Test]
-        public void BankDeposit_Add100_ReturnTrue()
+        public void BankDepositMoq_Add100_ReturnTrue()
         {
+            var logMock = new Mock<ILogBook>();
+            logMock.Setup(x => x.Message(""));
+
+            BankAccount bankAccount = new(logMock.Object);
+
             var result = bankAccount.Deposit(100);
             var getBalance = bankAccount.GetBalance();
 
