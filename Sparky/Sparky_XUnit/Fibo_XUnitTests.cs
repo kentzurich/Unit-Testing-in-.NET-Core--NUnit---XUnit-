@@ -1,42 +1,40 @@
-﻿//using NUnit.Framework;
+﻿using Xunit;
 
-//namespace Sparky
-//{
-//    [TestFixture]
-//    public class Fibo_XUnitTests
-//    {
-//        private Fibo _fibo;
-//        [SetUp]
-//        public void SetUp()
-//        {
-//            _fibo = new Fibo();
-//        }
+namespace Sparky
+{
+    public class Fibo_XUnitTests
+    {
+        private Fibo _fibo;
+        public Fibo_XUnitTests()
+        {
+            _fibo = new Fibo();
+        }
 
-//        [Test]
-//        public void FiboListChecker_InputNumberOne_ReturnsValidFiboListRange()
-//        {
-//            List<int> expectedRange = new() { 0 };
-//            _fibo.Range = 1;
+        [Fact]
+        public void FiboListChecker_InputNumberOne_ReturnsValidFiboListRange()
+        {
+            List<int> expectedRange = new() { 0 };
+            _fibo.Range = 1;
 
-//            var result = _fibo.GetFiboSeries();
+            var result = _fibo.GetFiboSeries();
 
-//            Assert.That(result, Is.Not.Empty);
-//            Assert.That(result, Is.Ordered);
-//            Assert.That(result, Is.EquivalentTo(expectedRange));
-//        }
+            Assert.NotEmpty(result);
+            Assert.Equal(expectedRange.OrderBy(x => x), result);
+            Assert.True(result.SequenceEqual(expectedRange));
+        }
 
-//        [Test]
-//        public void FiboListChecker_InputNumber6_ReturnsValidFiboListRange()
-//        {
-//            List<int> expectedRange = new() { 0, 1, 1, 2, 3, 5 };
-//            _fibo.Range = 6;
+        [Fact]
+        public void FiboListChecker_InputNumber6_ReturnsValidFiboListRange()
+        {
+            List<int> expectedRange = new() { 0, 1, 1, 2, 3, 5 };
+            _fibo.Range = 6;
 
-//            var result = _fibo.GetFiboSeries();
+            var result = _fibo.GetFiboSeries();
 
-//            Assert.That(result, Does.Contain(3));
-//            Assert.That(result.Count, Is.EqualTo(6));
-//            Assert.That(result, Has.No.Member(4));
-//            Assert.That(result, Is.EquivalentTo(expectedRange));
-//        }
-//    }
-//}
+            Assert.Contains(3, result);
+            Assert.Equal(6, result.Count);
+            Assert.DoesNotContain(4, result);
+            Assert.Equal(expectedRange, result);
+        }
+    }
+}
