@@ -65,29 +65,26 @@ namespace Sparky
             double result = calc.AddNumbersDouble(a, b);
 
             //Assert
-            Assert.Equal(15.9, result, .2);
+            Assert.Equal(15.9, result, 0);
         }
 
-        //[Fact]
-        //public void OddRanger_InputMinAndMaxRange_ReturnsValidOddNumberRange()
-        //{
-        //    //Arrange
-        //    Calculator calc = new();
-        //    List<int> expectedOddRange = new() { 5, 7, 9 }; //5-10
+        [Fact]
+        public void OddRanger_InputMinAndMaxRange_ReturnsValidOddNumberRange()
+        {
+            //Arrange
+            Calculator calc = new();
+            List<int> expectedOddRange = new() { 5, 7, 9 }; //5-10
 
-        //    //Act
-        //    List<int> result = calc.GetOddRange(5, 10);
+            //Act
+            List<int> result = calc.GetOddRange(5, 10);
 
-        //    //Assert
-        //    Assert.That(result, Is.EquivalentTo(expectedOddRange));
-        //    //Assert.AreEqual(expectedOddRange, result);
-        //    //Assert.Contains(7, result);
-        //    Assert.That(result, Does.Contain(7));
-        //    Assert.That(result, Is.Not.Empty);
-        //    Assert.That(result.Count, Is.EqualTo(3));
-        //    Assert.That(result, Has.No.Member(6));
-        //    Assert.That(result, Is.Ordered.Ascending);
-        //    Assert.That(result, Is.Unique);
-        //}
+            //Assert
+            Assert.Equal(expectedOddRange, result);
+            Assert.Contains(7, result);
+            Assert.NotEmpty(result);
+            Assert.Equal(3, result.Count);
+            Assert.DoesNotContain(6, result);
+            Assert.Equal(result.OrderBy(x => x), result);
+        }
     }
 }
