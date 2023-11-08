@@ -30,7 +30,6 @@ namespace Sparky
         [Theory]
         [InlineData(11)]
         [InlineData(13)]
-        //[TestCase(13, 12)]
         public void IsOddChecker_InputOddNumber_ReturnTrue(int a)
         {
             Calculator calc = new();
